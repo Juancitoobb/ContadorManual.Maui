@@ -21,6 +21,21 @@
                    HorizontalOptions="Center"/>
         </Border>
         <HorizontalStackLayout
+            Spacing="8">
+            <Label 
+                Text="El Conteo Incrementará por:"
+                VerticalOptions="Center"/>
+            <Entry
+                Text="{Binding Source={x:Reference IncrementoStepper}, Path=Value}"
+                IsReadOnly="True"/>
+            <Stepper
+                Minimum="1"
+                Maximum="20"
+                Value="{Binding Path=Incremento}"
+                Increment="1"
+                x:Name="IncrementoStepper"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
             HorizontalOptions="Center"
             Spacing="24"
             Margin="0,24,0,0">
